@@ -7,7 +7,7 @@ Component to display avatar icon in Streamlit
 ## Installation instructions
 
 ```sh
-pip install streamlit-avatar
+pip install streamlit_avatar
 ```
 
 ## Usage instructions
@@ -15,20 +15,50 @@ pip install streamlit-avatar
 ### Simple Usage
 
 ```python
-from streamlit-avatar import avatar
+import streamlit as st
+from streamlit_avatar import avatar
 
-avatar(url="https://picsum.photos/id/237/300/300",
-        size=40,
-        title="Hello",
-        caption="World",
-        key="avatar1")
+result = avatar(
+    [
+        {
+            "url": "https://picsum.photos/id/237/300/300",
+            "size": 40,
+            "title": "Sam",
+            "caption": "hello",
+            "key": "avatar1",
+        },
+        {
+            "url": "https://picsum.photos/id/238/300/300",
+            "size": 40,
+            "title": "Bob",
+            "caption": "happy",
+            "key": "avatar2",
+        },
+        {
+            "url": "https://picsum.photos/id/23/300/300",
+            "size": 40,
+            "title": "Rick",
+            "caption": "Bye",
+            "key": "avatar3",
+        },
+    ]
+)
+st.write(result)
+
+""" Return
+{
+"title":"Sam"
+"cption":"hello"
+"key":"avatar1"
+}
+"""
 ```
 
 ### Using Base64
 
 ```python
 import streamlit as st
-from streamlit_custom_avatar import avatar
+from streamlit_avatar import avatar
 import base64
 
 def get_image_base64(image_path):
@@ -39,12 +69,17 @@ image_path = "assets/image.png"
 image_base64 = get_image_base64(image_path)
 image_url = f"data:image/png;base64,{image_base64}"
 
-avatar(
-    url=image_url,
-    size=40,
-    title="Hello",
-    caption="World",
-    key="avatar1"
+result = avatar(
+    [
+        {
+            "url": image_url,
+            "size": 40,
+            "title": "Sam",
+            "caption": "hello",
+            "key": "avatar1",
+        }
+    ]
 )
+st.write(result)
 
 ```
