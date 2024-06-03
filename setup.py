@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-avatar",
-    version="0.1.2",
+    version="0.1.3",
     author="papasim824",
     author_email="papasim824@gmail.com",
     description="Component to display avatar icon in Streamlit",
