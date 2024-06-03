@@ -1,4 +1,4 @@
-# streamlit-avater
+# streamlit-avatar
 
 Component to display avatar icon in Streamlit
 
@@ -7,7 +7,7 @@ Component to display avatar icon in Streamlit
 ## Installation instructions
 
 ```sh
-pip install streamlit-avater
+pip install streamlit-avatar
 ```
 
 ## Usage instructions
@@ -15,20 +15,20 @@ pip install streamlit-avater
 ### Simple Usage
 
 ```python
-from streamlit-avater import avater
+from streamlit-avatar import avatar
 
-avater(url="https://picsum.photos/id/237/300/300",
+avatar(url="https://picsum.photos/id/237/300/300",
         size=40,
         title="Hello",
         caption="World",
-        key="avater1")
+        key="avatar1")
 ```
 
 ### Using Base64
 
 ```python
 import streamlit as st
-from streamlit_custom_avater import avater
+from streamlit_custom_avatar import avatar
 import base64
 
 def get_image_base64(image_path):
@@ -39,12 +39,12 @@ image_path = "assets/image.png"
 image_base64 = get_image_base64(image_path)
 image_url = f"data:image/png;base64,{image_base64}"
 
-avater(
+avatar(
     url=image_url,
     size=40,
     title="Hello",
     caption="World",
-    key="avater1"
+    key="avatar1"
 )
 
 ```
