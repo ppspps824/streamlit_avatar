@@ -7,7 +7,7 @@ Component to display avatar icon in Streamlit
 ## Installation instructions
 
 ```sh
-pip install streamlit_avatar
+pip install streamlit-avatar
 ```
 
 ## Usage instructions

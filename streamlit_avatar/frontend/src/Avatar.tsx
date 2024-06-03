@@ -42,7 +42,7 @@ class Avatar extends StreamlitComponentBase<AvatarProps> {
   }
 
   private onClicked = (title: string, caption: string, key: string): void => {
-    Streamlit.setComponentValue({ "title": title, "cption": caption, "key": key })
+    Streamlit.setComponentValue({ "title": title, "caption": caption, "key": key })
   }
 }
 

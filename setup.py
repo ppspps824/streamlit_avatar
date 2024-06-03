@@ -7,13 +7,13 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-avatar",
-    version="0.1",
+    version="0.1.2",
     author="papasim824",
     author_email="papasim824@gmail.com",
     description="Component to display avatar icon in Streamlit",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/ppspps824/streamlit_avatar",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[],
